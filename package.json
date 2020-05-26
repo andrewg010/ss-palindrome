@@ -1,4 +1,17 @@
 {
+  "name": "ss-palindrome",
+  "version": "1.0.0",
+  "description": "Palindrome game",
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andrewghx/ss-palindrome.git"
+  },
+  "author": { 
+    "name" : "Andrew Griffiths",
+    "email" : "codeandrewg@gmail.com",
+    "url" : "https://www.griffithsa.co.uk"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "4.16.2"
@@ -18,5 +31,6 @@
     "ts-jest": "^26.0.0",
     "ts-node": "^8.10.1",
     "typescript": "^3.9.3"
-  }
+  },
+  "license": "MIT"
 }
