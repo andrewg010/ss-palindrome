@@ -7,14 +7,14 @@
     "type": "git",
     "url": "https://github.com/andrewghx/ss-palindrome.git"
   },
-  "author": { 
-    "name" : "Andrew Griffiths",
-    "email" : "codeandrewg@gmail.com",
-    "url" : "https://www.griffithsa.co.uk"
+  "author": {
+    "name": "Andrew Griffiths",
+    "email": "codeandrewg@gmail.com",
+    "url": "https://www.griffithsa.co.uk"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "express": "4.16.2"
+    "express": "^4.17.1"
   },
   "scripts": {
     "test": "NODE_ENV=test jest --collect-coverage",

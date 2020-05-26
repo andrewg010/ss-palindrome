@@ -10,14 +10,11 @@ export default (entries: Entry[], maxNum: number) => {
   if (!entries.length) return []
 
   entries.forEach(({ name, points }) => {
-    const { topScores, lowestTopScore, topScoresFull } = getScoreInfo(topEntries, maxNum)
-
+    const { topScores, lowestTopScore, topScoresFull } = getScoreData(topEntries, maxNum)
     if (topScoresFull && points < lowestTopScore) return
-
     if (topScoresFull && !topScores[points]) {
       delete topEntries[lowestTopScore]
     }
-
     if (!topEntries[points]) topEntries[points] = []
     topEntries[points].push({ name, points })
   })
@@ -25,7 +22,7 @@ export default (entries: Entry[], maxNum: number) => {
   return getHighestScorersDescending(topEntries)
 }
 
-const getScoreInfo = (topEntries: TopEntries, maxNum: number) => {
+const getScoreData = (topEntries: TopEntries, maxNum: number) => {
   const topScores = convertObjectKeysToNumbers(Object.keys(topEntries))
   const lowestTopScore = getLowestTopScore(topScores)
   const topScoresFull = maxTopScoresReached(topScores.length, maxNum)
